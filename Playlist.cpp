@@ -29,7 +29,7 @@ Playlist::Playlist(string s) {
 //	//possible your push method works, but you won't know for sure until you complete Step 2
 //	//(Below)
 //
-//	readList(s);  // uncomment this line to test the push method you wrote in the DLL.cpp file.
+readList(s);  // uncomment this line to test the push method you wrote in the DLL.cpp file.
 //
 //
 //
@@ -52,7 +52,7 @@ Playlist::Playlist(string s) {
 //	La Bamba, Richie Valens ................3:29
 //	Margaritaville, Jimmy Buffett................2:55
 //	*/
-// //list->printList();  // uncomment out this line to test your printlist method.
+list->printList();  // uncomment out this line to test your printlist method.
 //
 //	cout << endl;
 ///*****************************************************************************************/
@@ -62,10 +62,10 @@ Playlist::Playlist(string s) {
 //	// NOTE:  THIS METHOD SHOULD NOT TRAVERSE THE ENTIRE LIST!!!!
 //
 //	//When written, uncomment out the code below.
-//	list->pop();
-//	list->printList();
-//	list->pop();
-//	list->printList();
+list->pop();
+list->printList();
+list->pop();
+list->printList();
 
 
 //	// YOu should get:
@@ -99,15 +99,15 @@ Playlist::Playlist(string s) {
 //	 *
 //	 *
 //	 */
-//	list->remove("Don't Be Cruel");  // removes from middle of list
-//	cout << endl;
-//	list->printList();
-//	list->remove("Black Magic Woman");  // removes last
-//	cout << endl;
-//	list->printList();
-//	list->remove("Let it Be");  // removes first.
-//	cout << endl;
-//	list->printList();
+list->remove("Don't Be Cruel");  // removes from middle of list
+cout << endl;
+list->printList();
+list->remove("Black Magic Woman");  // removes last
+cout << endl;
+list->printList();
+list->remove("Let it Be");  // removes first.
+cout << endl;
+list->printList();
 //
 //
 //	/*  You should get:
@@ -145,10 +145,10 @@ Playlist::Playlist(string s) {
 //	 * After removing and popping, the list is getting a bit short
 //	 */
 //
-//	list->push("Don't Be Cruel", "Elvis Presley", 4,43);
-//	list->push("Black Magic Woman", "Santana", 3,16);
-//	list->push("Let it Be", "Beatles", 3, 11);
-//	list->printList();
+list->push("Don't Be Cruel", "Elvis Presley", 4,43);
+list->push("Black Magic Woman", "Santana", 3,16);
+list->push("Let it Be", "Beatles", 3, 11);
+list->printList();
 //
 //
 //	/* Now the list should be:
@@ -174,15 +174,15 @@ Playlist::Playlist(string s) {
 //	 * Once you have it written, uncomment out the code below:
 //	 */
 //
-//	cout << "Moving Great Balls of Fire  up one" << endl << endl;
-//	list->moveUp("Great Balls of Fire");
-//	list->printList();
-//	cout << "Moving Great Balls of Fire  up one" << endl << endl;
-//	list->moveUp("Great Balls of Fire");
-//	list->printList();
-//	cout << "Moving Great Balls of Fire  up one" << endl<< endl;
-//	list->moveUp("Great Balls of Fire");
-//	list->printList();
+cout << "Moving Great Balls of Fire  up one" << endl << endl;
+list->moveUp("Great Balls of Fire");
+list->printList();
+cout << "Moving Great Balls of Fire  up one" << endl << endl;
+list->moveUp("Great Balls of Fire");
+list->printList();
+cout << "Moving Great Balls of Fire  up one" << endl<< endl;
+list->moveUp("Great Balls of Fire");
+list->printList();
 //
 //
 //	/* YOur output should be:
@@ -238,15 +238,15 @@ Playlist::Playlist(string s) {
 //	 * Once you have it written, uncomment out the code below:
 //	 */
 //
-//	cout << "Moving Black Magic Woman  down one" << endl << endl;
-//	list->moveDown("Black Magic Woman");
-//	list->printList();
-//	cout << "Moving Black Magic Woman  down one" << endl << endl;
-//	list->moveDown("Black Magic Woman");
-//	list->printList();
-//	cout << "Moving Black Magic Woman  down one" << endl<< endl;
-//	list->moveDown("Black Magic Woman");
-//	list->printList();
+cout << "Moving Black Magic Woman  down one" << endl << endl;
+list->moveDown("Black Magic Woman");
+list->printList();
+cout << "Moving Black Magic Woman  down one" << endl << endl;
+list->moveDown("Black Magic Woman");
+list->printList();
+cout << "Moving Black Magic Woman  down one" << endl<< endl;
+list->moveDown("Black Magic Woman");
+list->printList();
 //
 //	/* YOur output should be:
 //	 * Moving Black Magic Woman  down one
@@ -303,22 +303,22 @@ Playlist::Playlist(string s) {
 //	 */
 //
 //
-//	list->printList();
-//	int mintot = 0;
-//	int sectot = 0;
-//	list->listDuration(&mintot, &sectot);
-//	mintot += sectot/60;
-//	sectot = sectot%60;
-//	int hr = 0;
-//	if (mintot>=60) {
-//		hr = mintot/60;
-//		mintot %= 60;
-//	}
-//	cout << "The total playlist time is ";
-//	hr>0?cout<<hr<<":":cout<<" ";
-//	cout<< mintot<<":";
-//	sectot<10?cout<<"0"<<sectot:cout<<sectot;
-//	cout << endl<<flush;
+list->printList();
+int mintot = 0;
+int sectot = 0;
+list->listDuration(&mintot, &sectot);
+mintot += sectot/60;
+sectot = sectot%60;
+int hr = 0;
+if (mintot>=60) {
+	hr = mintot/60;
+	mintot %= 60;
+}
+cout << "The total playlist time is ";
+hr>0?cout<<hr<<":":cout<<" ";
+cout<< mintot<<":";
+sectot<10?cout<<"0"<<sectot:cout<<sectot;
+cout << endl<<flush;
 //
 //
 //
@@ -354,11 +354,11 @@ Playlist::Playlist(string s) {
 //	 */
 //
 //
-//	list->makeRandom();
-//	list->printList();
-//	cout << "***************" << endl;
-//	list->makeRandom();
-//	list->printList();
+list->makeRandom();
+list->printList();
+cout << "***************" << endl;
+list->makeRandom();
+list->printList();
 //
 //
 //
@@ -402,8 +402,8 @@ Playlist::Playlist(string s) {
 //	 * Once you have it written, uncomment out the code below:
 //	 */
 //
-//	delete(list);
-//	cout << "Yep, deleted" << endl;
+delete(list);
+cout << "Yep, deleted" << endl;
 //
 //
 //	/* your output should be...
@@ -416,10 +416,10 @@ Playlist::Playlist(string s) {
 //	/* Step 9.5:  Uncomment out the code below to read in a new, longer list
 //	 */
 //
-//	list = new DLL();
-//	readList("MyListOfSongs.txt");
-//	list->printList();
-//	cout << endl;
+list = new DLL();
+readList("MyListOfSongs.txt");
+list->printList();
+cout << endl;
 //
 //
 //	/* If successful, you should get this:
@@ -484,9 +484,32 @@ Playlist::Playlist(string s) {
 //
 //
 //	/* Your output should go here */
-
-
-
+//	 * 1) add at least 2 songs (and print the list after each add)
+//list->push("Cruel Summer","Taylor Swift",2,58);
+//list->printList();
+//list->push("Headlines","Drake",3,55);
+//list->printList();
+//	 * 2) remove at least 2 songs (and print the list after each remove)
+//list->remove("Jonny B Good");
+//list->printList();
+//list->remove("Good News");
+//list->printList();
+//	 * 3) Move up at least twice (and print)
+//list->moveUp("Dreams");
+//list->printList();
+//list->moveUp("I Wanna Get Better");
+//list->printList();
+//	 * 4) Move down at least twice (and print)
+//list->moveDown("Purple Hat");
+//list->printList();
+//list->moveDown("17");
+//list->printList();
+//	 * 5) Randomize twice (and print)
+//list->makeRandom();
+//list->printList();
+//cout << "---------------" << endl;
+//list->makeRandom();
+//list->printList();
 }
 
 void Playlist::interface() {
